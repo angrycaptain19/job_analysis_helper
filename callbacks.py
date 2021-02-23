@@ -57,7 +57,7 @@ def push_log_to_front(n, logFileName):
     if logFileName:
         with open('./log/' + logFileName, 'r', encoding='utf-8') as f:
             logInfo = f.read().splitlines()
-        return '\n'.join([elem for elem in logInfo if 'POST' not in elem])
+        return '\n'.join(elem for elem in logInfo if 'POST' not in elem)
     else:
         return '請輸入關鍵字來執行爬蟲程式唷!'
 
